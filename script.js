@@ -1,25 +1,59 @@
+// FilmZone - Movie Database
 const moviesData = {
     bollywood: [
-        { id: 1, title: "Pathaan", year: "2023", rating: 8.2, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BM2QzOGU2ZGYtNzlkOS00NTFmLWJiNzgtNjc5YjQzODg0OWFhXkEyXkFqcGc@._V1_.jpg" },
-        { id: 2, title: "Jawan", year: "2023", rating: 8.5, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BNjk4YTUxMzktN2I0OC00YzlkLWI4ZTgtMDMxMjA3OWY0MjE1XkEyXkFqcGc@._V1_.jpg" },
-        { id: 3, title: "Animal", year: "2023", rating: 7.8, genre: "Crime", poster: "https://m.media-amazon.com/images/M/MV5BNGVlNGZlZTktNTQzMy00ODliLTk1ZjMtZTVlZDY2NDI0ZGYxXkEyXkFqcGc@._V1_.jpg" },
-        { id: 4, title: "12th Fail", year: "2023", rating: 9.0, genre: "Drama", poster: "https://m.media-amazon.com/images/M/MV5BZTg2ZjU1NzktNmU3MS00YTFhLWIwNmEtN2Q5YzA4YzJiZjMwXkEyXkFqcGc@._V1_.jpg" }
+        { id: 1, title: "Fighter", year: "2024", rating: 7.2, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMTk5MjM0OTU4Ml5BMl5BanBnXkFtZTgwNzA3MTY3OTE@._V1_.jpg" },
+        { id: 2, title: "Crew", year: "2024", rating: 7.0, genre: "Comedy", poster: "https://m.media-amazon.com/images/M/MV5BNzQxNzE1MjktMDY5Ny00ZGRjLWI1YTktNWQ4OTI5NTk0N2E5XkEyXkFqcGc@._V1_.jpg" },
+        { id: 3, title: "Shaitaan", year: "2024", rating: 7.5, genre: "Horror", poster: "https://m.media-amazon.com/images/M/MV5BOTJiMDMxOWQtZjUzMS00MTkwLTkxMmQtNjM0OWZlMjlmMmNmXkEyXkFqcGc@._V1_.jpg" },
+        { id: 4, title: "Pathaan", year: "2023", rating: 8.2, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BM2QzOGU2ZGYtNzlkOS00NTFmLWJiNzgtNjc5YjQzODg0OWFhXkEyXkFqcGc@._V1_.jpg" },
+        { id: 5, title: "Jawan", year: "2023", rating: 8.5, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BNjk4YTUxMzktN2I0OC00YzlkLWI4ZTgtMDMxMjA3OWY0MjE1XkEyXkFqcGc@._V1_.jpg" },
+        { id: 6, title: "Animal", year: "2023", rating: 7.8, genre: "Crime", poster: "https://m.media-amazon.com/images/M/MV5BNGVlNGZlZTktNTQzMy00ODliLTk1ZjMtZTVlZDY2NDI0ZGYxXkEyXkFqcGc@._V1_.jpg" },
+        { id: 7, title: "12th Fail", year: "2023", rating: 9.0, genre: "Drama", poster: "https://m.media-amazon.com/images/M/MV5BZTg2ZjU1NzktNmU3MS00YTFhLWIwNmEtN2Q5YzA4YzJiZjMwXkEyXkFqcGc@._V1_.jpg" },
+        { id: 8, title: "Dunki", year: "2023", rating: 7.1, genre: "Comedy-Drama", poster: "https://m.media-amazon.com/images/M/MV5BNWQyODFjNTAtYmM0NS00NjllLTk4MjUtYTJhOGFkMGMzMTkxXkEyXkFqcGc@._V1_.jpg" },
+        { id: 9, title: "Tiger 3", year: "2023", rating: 6.5, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BZjI0ZWI4NjQtM2E0NC00MTYyLTk5OWQtM2RmMjBhMGMxZTM0XkEyXkFqcGc@._V1_.jpg" },
+        { id: 10, title: "Sam Bahadur", year: "2023", rating: 8.1, genre: "Biography", poster: "https://m.media-amazon.com/images/M/MV5BZTk5OTEyNjItYjMwNC00OGM5LTgxOTMtMzRkOWIwMmQ5YjY3XkEyXkFqcGc@._V1_.jpg" },
+        { id: 11, title: "3 Idiots", year: "2009", rating: 8.4, genre: "Comedy-Drama", poster: "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGc@._V1_.jpg" },
+        { id: 12, title: "Dangal", year: "2016", rating: 8.3, genre: "Biography", poster: "https://m.media-amazon.com/images/M/MV5BMTQ4MzQzMzM2Nl5BMl5BanBnXkFtZTgwMTQ1NzU3MDI@._V1_.jpg" },
+        { id: 13, title: "PK", year: "2014", rating: 8.1, genre: "Comedy-Drama", poster: "https://m.media-amazon.com/images/M/MV5BMTYzOTE2NjkxN15BMl5BanBnXkFtZTgwMDgzMTg0MzE@._V1_.jpg" },
+        { id: 14, title: "Bahubali 2", year: "2017", rating: 8.2, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BOGNlZGY4OTgtNTRmZC00NzM3LWExZjQtYmVhMjE2MzYxYzRkXkEyXkFqcGc@._V1_.jpg" },
+        { id: 15, title: "RRR", year: "2022", rating: 8.0, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BODUwNDNjYzctODUxNy00ZTA2LWIyYTEtMDc5Y2E5ZjBmNTMzXkEyXkFqcGc@._V1_.jpg" },
+        { id: 16, title: "KGF Chapter 2", year: "2022", rating: 8.4, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMjMxOTk5MDM0Ml5BMl5BanBnXkFtZTgwNzc0MTI5NzM@._V1_.jpg" },
+        { id: 17, title: "Pushpa", year: "2021", rating: 7.6, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMmQ4YmM3NjgtNTExNC00ZTZhLTkwOTMtMjIxNDA5Nzc4OWE0XkEyXkFqcGc@._V1_.jpg" },
+        { id: 18, title: "Kabir Singh", year: "2019", rating: 7.1, genre: "Romance", poster: "https://m.media-amazon.com/images/M/MV5BNzgxODgyNjItYTFiNy00ZTQ2LWJkMjUtYWE0OTA0ZDhlMWY2XkEyXkFqcGc@._V1_.jpg" },
+        { id: 19, title: "War", year: "2019", rating: 7.4, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMzUyNmVlNDctY2ExNi00MGI0LWEyMGEtYmI1NjNiZjFhMTU4XkEyXkFqcGc@._V1_.jpg" },
+        { id: 20, title: "Uri", year: "2019", rating: 8.3, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMWU4ZjNlNTQtOGE2MS00NDI0LWFlYjMtMmY3ZWVkMjJkNGRmXkEyXkFqcGc@._V1_.jpg" },
+        { id: 21, title: "Stree", year: "2018", rating: 7.6, genre: "Horror-Comedy", poster: "https://m.media-amazon.com/images/M/MV5BYWNmY2RjOTYtM2MxYS00NjBhLWFmM2ItMWM3NWFjNzkwZDQ3XkEyXkFqcGc@._V1_.jpg" },
+        { id: 22, title: "Stree 2", year: "2024", rating: 8.0, genre: "Horror-Comedy", poster: "https://m.media-amazon.com/images/M/MV5BZGQ3NjZjNWMtZTBmNi00ZDJhLThmNDgtNGUzN2ZmNGQxMzY5XkEyXkFqcGc@._V1_.jpg" },
+        { id: 23, title: "Kalki 2898 AD", year: "2024", rating: 7.5, genre: "Sci-Fi", poster: "https://m.media-amazon.com/images/M/MV5BNmM1MmYzOTktYzVlOS00ZmE0LTk4YTgtNzZjYzNhMmI4ZWUxXkEyXkFqcGc@._V1_.jpg" },
+        { id: 24, title: "Bhool Bhulaiyaa 3", year: "2024", rating: 6.8, genre: "Horror-Comedy", poster: "https://m.media-amazon.com/images/M/MV5BMjE5MmM3YWYtN2RmNC00ZjExLTlkZGMtYWQ3NjU0YTM4Y2JjXkEyXkFqcGc@._V1_.jpg" },
+        { id: 25, title: "Singham Again", year: "2024", rating: 6.5, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMTMwMzQ0MzI4Ml5BMl5BanBnXkFtZTcwNTE5NzM0Ng@@._V1_.jpg" }
     ],
     hollywood: [
-        { id: 5, title: "Oppenheimer", year: "2023", rating: 8.9, genre: "Biography", poster: "https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_.jpg" },
-        { id: 6, title: "Dune: Part Two", year: "2024", rating: 8.7, genre: "Sci-Fi", poster: "https://m.media-amazon.com/images/M/MV5BNTc0YmQxMjEtODI5MC00NjFiLTlkMWUtOGQ5NjFmYWUyZGJhXkEyXkFqcGc@._V1_.jpg" },
-        { id: 7, title: "The Batman", year: "2022", rating: 8.0, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4MzgwYjY1XkEyXkFqcGc@._V1_.jpg" },
-        { id: 8, title: "Avengers: Endgame", year: "2019", rating: 8.4, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg" }
+        { id: 26, title: "Dune: Part Two", year: "2024", rating: 8.7, genre: "Sci-Fi", poster: "https://m.media-amazon.com/images/M/MV5BNTc0YmQxMjEtODI5MC00NjFiLTlkMWUtOGQ5NjFmYWUyZGJhXkEyXkFqcGc@._V1_.jpg" },
+        { id: 27, title: "Oppenheimer", year: "2023", rating: 8.9, genre: "Biography", poster: "https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_.jpg" },
+        { id: 28, title: "Barbie", year: "2023", rating: 7.3, genre: "Comedy", poster: "https://m.media-amazon.com/images/M/MV5BNjU3N2QxNzYtMjk1NC00MTc4LTk1NTQtMmUxNTljM2I0NDA5XkEyXkFqcGc@._V1_.jpg" },
+        { id: 29, title: "John Wick 4", year: "2023", rating: 8.2, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGc@._V1_.jpg" },
+        { id: 30, title: "Spider-Verse", year: "2023", rating: 8.7, genre: "Animation", poster: "https://m.media-amazon.com/images/M/MV5BNThiZjA3MjItZGY5Ni00ZmJhLWEwN2EtOTBlYTA4Y2E0M2ZmXkEyXkFqcGc@._V1_.jpg" },
+        { id: 31, title: "Guardians 3", year: "2023", rating: 8.1, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BOTJhOTMxMmItZmE0Ny00MDc3LWEzOGEtOGFkMzY4MWYyZDQ0XkEyXkFqcGc@._V1_.jpg" },
+        { id: 32, title: "MI: Dead Reckoning", year: "2023", rating: 7.8, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BYzFiZjc1YzctMDY3Zi00NGE5LTlmNWEtN2Q3OWFjYjY1NGM2XkEyXkFqcGc@._V1_.jpg" },
+        { id: 33, title: "Avengers: Endgame", year: "2019", rating: 8.4, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg" },
+        { id: 34, title: "Infinity War", year: "2018", rating: 8.4, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg" },
+        { id: 35, title: "The Batman", year: "2022", rating: 8.0, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4MzgwYjY1XkEyXkFqcGc@._V1_.jpg" },
+        { id: 36, title: "The Dark Knight", year: "2008", rating: 9.0, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg" },
+        { id: 37, title: "Inception", year: "2010", rating: 8.8, genre: "Sci-Fi", poster: "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg" },
+        { id: 38, title: "Interstellar", year: "2014", rating: 8.7, genre: "Sci-Fi", poster: "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" },
+        { id: 39, title: "Top Gun: Maverick", year: "2022", rating: 8.3, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg" },
+        { id: 40, title: "Avatar 2", year: "2022", rating: 7.8, genre: "Sci-Fi", poster: "https://m.media-amazon.com/images/M/MV5BYjhiNjBlODctY2ZiOC00YjVlLWFlNzAtNTVhNzM1YjI1NzMxXkEyXkFqcGdeQXVyMjQxNTE1MDA@._V1_.jpg" },
+        { id: 41, title: "Avatar", year: "2009", rating: 7.9, genre: "Sci-Fi", poster: "https://m.media-amazon.com/images/M/MV5BNmQxNjZlZTctMmU0MC00MzMwLTlmYzEtNzI5ODc1N2Q2MjJjXkEyXkFqcGc@._V1_.jpg" },
+        { id: 42, title: "Titanic", year: "1997", rating: 7.9, genre: "Romance", poster: "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg" },
+        { id: 43, title: "The Godfather", year: "1972", rating: 9.2, genre: "Crime", poster: "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" },
+        { id: 44, title: "Shawshank", year: "1994", rating: 9.3, genre: "Drama", poster: "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg" },
+        { id: 45, title: "Iron Man", year: "2008", rating: 7.9, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_.jpg" },
+        { id: 46, title: "Black Panther", year: "2018", rating: 7.3, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BNTM4NjIxNmEtYWE5NS00NDczLTkyNWQtYThhNmQyZGQzMjM0XkEyXkFqcGc@._V1_.jpg" },
+        { id: 47, title: "Deadpool", year: "2024", rating: 8.0, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BMTY0NjQ4NjYyNV5BMl5BanBnXkFtZTgwMDc1MTM1OTE@._V1_.jpg" },
+        { id: 48, title: "Godzilla x Kong", year: "2024", rating: 6.8, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BNDg1NTU2OWEtM2UzYi00ZWRmLWEwMTktZWNjYWQ1NWM1OThjXkEyXkFqcGc@._V1_.jpg" },
+        { id: 49, title: "Kung Fu Panda 4", year: "2024", rating: 7.0, genre: "Animation", poster: "https://m.media-amazon.com/images/M/MV5BNGM0YTk3MzUtNjRiOS00MjdlLTgwZjUtNDc2ZWMzNjkyZTMyXkEyXkFqcGc@._V1_.jpg" },
+        { id: 50, title: "Fast X", year: "2023", rating: 5.9, genre: "Action", poster: "https://m.media-amazon.com/images/M/MV5BNzZmOTU1ZTEtYzVhNi00NzQxLWI5ZjAtNWNhNjEwY2E3YmZjXkEyXkFqcGc@._V1_.jpg" }
     ]
 };
-
-function createMovieCard(movie) {
-    return '<div class="movie-card"><div class="movie-poster"><img src="' + movie.poster + '" alt="' + movie.title + '" loading="lazy"><div class="movie-rating">* ' + movie.rating + '</div></div><div class="movie-info"><h3 class="movie-title">' + movie.title + '</h3><div class="movie-meta">' + movie.year + ' | ' + movie.genre + '</div></div></div>';
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    var bollywoodContainer = document.getElementById('bollywoodMovies');
-    var hollywoodContainer = document.getElementById('hollywoodMovies');
-    if (bollywoodContainer) bollywoodContainer.innerHTML = moviesData.bollywood.map(createMovieCard).join('');
-    if (hollywoodContainer) hollywoodContainer.innerHTML = moviesData.hollywood.map(createMovieCard).join('');
-});
+function createMovieCard(movie) { return '<div class="movie-card"><div class="movie-poster"><img src="' + movie.poster + '" alt="' + movie.title + '" loading="lazy"><div class="movie-rating">* ' + movie.rating + '</div></div><div class="movie-info"><h3 class="movie-title">' + movie.title + '</h3><div class="movie-meta">' + movie.year + ' | ' + movie.genre + '</div></div></div>'; }
+document.addEventListener('DOMContentLoaded', function() { var b = document.getElementById('bollywoodMovies'); var h = document.getElementById('hollywoodMovies'); if(b) b.innerHTML = moviesData.bollywood.map(createMovieCard).join(''); if(h) h.innerHTML = moviesData.hollywood.map(createMovieCard).join(''); });
